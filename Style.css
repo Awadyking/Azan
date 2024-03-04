@@ -17,10 +17,11 @@ header{
 nav{
     background-color: #333333;
     direction: rtl;
-    height: 4vh;
+    height: max-content;
     display: flex;
     padding-right: 15px;
-    margin-top: 1.5vh;
+    margin-top: 2.5vh;
+    flex-wrap: wrap;
 }
 
 .Nav-B{
@@ -79,6 +80,7 @@ flex-wrap: wrap;
     height: 315px;
     background-color: #f0f0f0;
     border-radius: 25px;
+    margin-bottom: 10px;
 }
 
 .Card:hover{
@@ -143,7 +145,7 @@ flex-wrap: wrap;
 }
 
 .About div{
-    height: 40px;
+    height: fit-content;
     background-color: #000000;
     color: #fff;
     font-size: 16px;
