@@ -1,0 +1,157 @@
+body{
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    background-color: #008ce3;
+}
+
+header{
+    width: 100%;
+    text-align: center;
+    height: 10vh;
+    background-color: #e5ff00;
+    font-size: 25px;
+    position: fixed;
+    top: 0;
+}
+nav{
+    background-color: #333333;
+    direction: rtl;
+    height: 4vh;
+    display: flex;
+    padding-right: 15px;
+    margin-top: 1.5vh;
+}
+
+.Nav-B{
+    width: 25%;
+    font-size: 15px;
+    font-weight: bold;
+    color: antiquewhite;
+    padding-right: 2px;
+    padding-top: 2px;
+    text-wrap: nowrap;
+    cursor: pointer;
+}
+
+.Nav-B:hover{
+    background-color: azure;
+    color: black;
+    transition: 1s;
+}
+
+.Choose{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+
+.Choose option,
+.Choose select{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+label{
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.Choose select,
+.Choose input{
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.Times-Cards{
+margin-top: 30px;
+width: 100%;
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+}
+.Card{
+    width: 200px;
+    height: 315px;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+}
+
+.Card:hover{
+    background-color: #eeff52;
+    transition: 2s;
+}
+
+.Card img{
+    width: 190px;
+    height: 250px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.Card p{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    color: #3f2c00;
+}
+
+.Month-times table{
+    width: 95%;
+    margin-right: 2.5%;
+    margin-top: 35px;
+    height: max-content;
+    
+}
+.Month-times table:nth-child(odd){
+    background: #000000;
+}
+
+.Month-times tr{
+    height: 10px;
+    background-color: #f0f0f0;
+    
+}
+.Month-times table td:nth-child(odd){
+    background-color: #ff6600;
+}
+
+#TableH td:nth-child(odd){
+    background-color: #00ff55;
+}
+
+#TableH{
+    margin-top: 35px;
+}
+
+.Month-times table tr td {
+    height: 30px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.About{
+    margin-top: 100px;
+    width: 100%;
+}
+
+.About div{
+    height: 40px;
+    background-color: #000000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer{
+    background-color: #e5ff00;
+    text-align: center;
+}

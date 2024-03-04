@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مواقيت الصلاة</title>
+    <link href="./Style.css" rel="stylesheet" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header>
+      مواقيت الصلاة
+      <nav>
+        <div
+          id="Times"
+          class="Nav-B"
+          onclick="ScrnV ='C-Times' ; ScrnCon(); GetData()"
+        >
+          مواقيت الصلاة
+        </div>
+        <div
+          id="Times"
+          class="Nav-B"
+          onclick="ScrnV ='G-Times' ; ScrnCon(); GetData()"
+        >
+          جدول مواقيت الصلاة طول الشهرالميلادي
+        </div>
+        <div
+          id="Times"
+          class="Nav-B"
+          onclick="ScrnV ='H-Times' ; ScrnCon(); GetData()"
+        >
+          جدول مواقيت الصلاة طول الشهر هجرياً
+        </div>
+      </nav>
+    </header>
+
+    <div class="Choose" onchange="GetData()">
+      <div>
+        <label>الدولة :</label>
+        <select id="Country" onchange="CountryValue = this.value; GetCity()">
+          <option value="Egypt" selected>مصر</option>
+          <option value="KSA">المملكة العربية السعودية</option>
+          <option value="UAE">الإمارات العربية المتحدة</option>
+        </select>
+      </div>
+      <div>
+        <label>المدينة :</label>
+        <select id="City" onchange="CityValue = this.value;"></select>
+      </div>
+      <div>
+        <label>التاريخ :</label>
+        <input
+          id="Date"
+          type="date"
+          onchange="DateValue = this.value ;SetDate() "
+        />
+      </div>
+    </div>
+    <div id="Scrn">
+      <div class="Times-Cards">
+        <div class="Card" id="Fajr">
+          <p>الفجر</p>
+          <img src="img/Fajr.png"/>
+          <p id="FajrT"></p>
+        </div>
+        <div class="Card" id="Sunrise">
+          <p>الشروق</p>
+          <img src="img/Sunrise.png"/>
+          <p id="SunriseT"></p>
+        </div>
+        <div class="Card" id="Dhuhr">
+          <p>الظهر</p>
+          <img src="img/Dhuhr.png"/>
+          <p id="DhuhrT"></p>
+        </div>
+        <div class="Card" id="Asr">
+          <p>العصر</p>
+          <img src="img/Asr.png"/>
+          <p id="AsrT"></p>
+        </div>
+        <div class="Card" id="Maghrib">
+          <p>المغرب</p>
+          <img src="img/Maghrib.png"/>
+          <p id="MaghribT"></p>
+        </div>
+        <div class="Card" id="Isha">
+          <p>العشاء</p>
+          <img src="img/Isha.png"/>
+          <p id="IshaT"></p>
+        </div>
+      </div>
+    </div>
+    <div class="About">
+      <div>
+        مرحبا ! أنا طالب في الثانوية وقمت بعمل هذا المشروع بناءً على طلب أستاذ
+        يعرب من أكاديمية ترميز في إحدى دروسه متمنيا أن ينال إعجابه
+      </div>
+      <footer id="footer"></footer>
+    </div>
+  </body>
+  <script src="Script.js"></script>
+</html>
