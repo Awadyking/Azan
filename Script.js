@@ -163,7 +163,7 @@ SetDateNow()
 
 function GetData(){
     //Get Gregorian data
-link ="http://api.aladhan.com/v1/calendarByCity/"+Year+"/" +Month +"?city="+CityValue +"&country="+CountryValue
+link ="http://api.aladha.com/v1/calendarByCity/"+Year+"/" +Month +"?city="+CityValue +"&country="+CountryValue
 axios.get(link)
 .then((Res) => {
 
@@ -193,7 +193,11 @@ axios.get(link)
     </tr>`
     }
 })
+.catch(()=>{
+    document.getElementById("Scrn").innerHTML = ""
+    document.getElementById("Scrn").innerHTML = `<p id="Error">Sorry! This is An Error</p>`
 
+})
  
 axios.get(link)
 .then((Res) => {
@@ -224,7 +228,11 @@ axios.get(link)
     </tr>`
     }
 })
+.catch(()=>{
+    document.getElementById("Scrn").innerHTML = ""
+    document.getElementById("Scrn").innerHTML = `<p id="Error">Sorry! This is An Error</p>`
 
+})
 
 axios.get(link)
 .then((Res)=>{
@@ -236,7 +244,11 @@ document.getElementById("MaghribT").innerHTML = Res.data.data[0].timings.Maghrib
 document.getElementById("IshaT").innerHTML = Res.data.data[0].timings.Isha
 
 })
+.catch(()=>{
+    document.getElementById("Scrn").innerHTML = ""
+    document.getElementById("Scrn").innerHTML = `<p id="Error">Sorry! This is An Error</p>`
 
+})
 }
 
 GetData()

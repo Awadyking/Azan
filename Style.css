@@ -141,6 +141,8 @@ flex-wrap: wrap;
 
 .About{
     margin-top: 100px;
+    position: absolute;
+    bottom: 0;
     width: 100%;
 }
 
@@ -155,5 +157,12 @@ flex-wrap: wrap;
 
 footer{
     background-color: #e5ff00;
+    text-align: center;
+   
+}
+
+#Error{
+    font-size: 60px;
+    font-weight: bold;
     text-align: center;
 }
