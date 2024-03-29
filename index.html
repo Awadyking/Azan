@@ -6,11 +6,14 @@
     <title>مواقيت الصلاة</title>
     <link href="./Style.css" rel="stylesheet" />
     <script src="node_modules/axios/dist/axios.js"></script>
+    <script src="Scripts/Date.js"></script>
+
+
   </head>
   <body>
-    <header>
+    <header id="header">
       مواقيت الصلاة
-      <nav>
+      <nav id="nav">
         <div
           id="Times"
           class="Nav-B"
@@ -25,17 +28,10 @@
         >
           جدول مواقيت الصلاة طول الشهرالميلادي
         </div>
-        <div
-          id="Times"
-          class="Nav-B"
-          onclick="ScrnV ='H-Times' ; ScrnCon(); GetData()"
-        >
-          جدول مواقيت الصلاة طول الشهر هجرياً
-        </div>
       </nav>
     </header>
 
-    <div class="Choose" onchange="GetData()">
+    <div class="Choose" onchange="GetData()" id="Choose">
       <div>
         <label>الدولة :</label>
         <select id="Country" onchange="CountryValue = this.value; GetCity()">
@@ -56,7 +52,9 @@
           onchange="DateValue = this.value ;SetDate() "
         />
       </div>
+
     </div>
+
     <div id="Scrn">
       <div class="Times-Cards">
         <div class="Card" id="Fajr">
@@ -91,13 +89,26 @@
         </div>
       </div>
     </div>
-    <div class="About">
+    <div class="About" id="About">
       <div>
         مرحبا ! أنا طالب في الثانوية وقمت بعمل هذا المشروع بناءً على طلب أستاذ
         يعرب من أكاديمية ترميز في إحدى دروسه متمنيا أن ينال إعجابه
       </div>
       <footer id="footer"></footer>
+
     </div>
+<div id="Loading">
+  <div class="lds-ripple"><div></div><div></div></div>
+</div>
+
+
   </body>
-  <script src="Script.js"></script>
+  <script>
+  document.getElementById("footer").innerHTML = `Copyright © ${YearNow} . All rights reserved`;
+  </script>
+
+
+  <script src="Scripts/CountriesData.js"></script>
+  <script src="Scripts/Script.js"></script>
+  <script src="Scripts/ScrnCon.js"></script>
 </html>
